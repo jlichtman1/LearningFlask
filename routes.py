@@ -26,7 +26,7 @@ def upload_file():
       if f.filename == '':
           return 'No File'
       if '.csv' not in f.filename:
-          return 'Not a CSV file'
+          return 'Not a CSV file, I swear!'
       filename= secure_filename(f.filename)
       f.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
       fin= open(os.path.join(app.config['UPLOAD_FOLDER'], filename))
